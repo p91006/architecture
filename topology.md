@@ -15,8 +15,9 @@ flowchart LR
 
     C -->|"Method"| R
     R -->|"HTTPS"| A
-    A -->|"HTTPS · platform-signed token"| S
-    S -->|"provider API"| P
+    C -->|"HTTPS"| R
+    A <-->|"HTTPS · platform-signed token"| S
+    S <-->|"provider API"| P
     S -->|"pre-signed URL · ~30s TTL"| G
     S -.->|"spans · structured logs"| O
 ```
