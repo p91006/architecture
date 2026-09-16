@@ -14,7 +14,7 @@ flowchart LR
     O[("Logging + tracing")]
 
     C -->|"Method"| R
-    C -->|"HTTPS"| A
+    R -->|"HTTPS"| A
     A -->|"HTTPS · platform-signed token"| S
     S -->|"provider API"| P
     S -->|"pre-signed URL · ~30s TTL"| G
